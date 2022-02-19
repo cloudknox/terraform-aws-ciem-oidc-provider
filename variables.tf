@@ -1,0 +1,16 @@
+variable "azure_authority_uri" {
+  description = "indicates a uri that the aws app inside azure active directory can request tokens from"
+  default     = "sts.windows.net"
+}
+
+variable "azure_sp_client_id" {
+  description = "the client id of the service principal that was created during onboarding"
+}
+
+variable "ciem_oidc_role_name" {
+  description = "name of the oidc iam role"
+}
+
+variable "tenant_id" {
+  description = "id of the tenant where the application is created"
+}

@@ -1,0 +1,25 @@
+# https://docs.mergify.io/conditions.html
+# https://docs.mergify.io/actions.html
+pull_request_rules:
+  - name: "delete the head branch after merge"
+    conditions:
+      - "merged"
+    actions:
+      delete_head_branch: {}
+
+  - name: "ask to resolve conflict"
+    conditions:
+      - "conflict"
+      - "-closed"
+    actions:
+      comment:
+        message: "This pull request is now in conflict. Could you fix it @{{author}}? 🙏"
+
+  - name: "remove outdated reviews"
+    conditions:
+      - "base=main"
+    actions:
+      dismiss_reviews:
+        changes_requested: true
+        approved: true
+        message: "This Pull Request has been updated, so we're dismissing all reviews."
