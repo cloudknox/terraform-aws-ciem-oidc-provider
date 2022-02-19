@@ -1,6 +1,5 @@
 variable "azure_authority_uri" {
   description = "indicates a uri that the aws app inside azure active directory can request tokens from"
-  default     = "sts.windows.net"
   type        = string
 }
 
