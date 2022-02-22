@@ -4,4 +4,4 @@
 # Order is important: the last matching pattern has the highest precedence
 
 # These owners will be the default owners for everything
-*             @cloudknox/sre
+* @cloudknox/eng-approvers @cloudknox/sre-approvers
